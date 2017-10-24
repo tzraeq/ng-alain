@@ -1,12 +1,11 @@
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import { SettingsService } from "@core/services/settings.service";
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { SettingsService } from '@core/services/settings.service';
 
 @Component({
   selector: 'app-pages-forget',
-  templateUrl: './forget.component.html',
-  styleUrls: ['./forget.component.scss']
+  templateUrl: './forget.component.html'
 })
 export class ForgetComponent {
   valForm: FormGroup;
@@ -18,6 +17,7 @@ export class ForgetComponent {
   }
 
   submit() {
+    // tslint:disable-next-line:forin
     for (const i in this.valForm.controls) {
       this.valForm.controls[i].markAsDirty();
     }

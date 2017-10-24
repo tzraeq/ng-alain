@@ -1,22 +1,25 @@
-import { NgModule, ModuleWithProviders } from "@angular/core";
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AngularWebStorageModule } from 'angular-web-storage';
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { NgZorroAntdModule } from "ng-zorro-antd";
-import { TranslateModule } from "@ngx-translate/core";
+import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { TranslateModule } from '@ngx-translate/core';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { AngularEchartsModule } from 'ngx-echarts';
 
-import { SparklineDirective } from './directives/sparkline/sparkline.directive';
-import { MomentDatePipe } from "./pipes/moment-date.pipe";
-import { CNCurrencyPipe } from "./pipes/cn-currency.pipe";
-import { KeysPipe } from "./pipes/keys.pipe";
-import { YNPipe } from "./pipes/yn.pipe";
-import { ModalHelper } from "./helper/modal.helper";
+import { SparklineDirective } from './directives/sparkline.directive';
+import { DownFileDirective } from '@shared/directives/down-file.directive';
+import { ImageDirective } from './directives/image.directive';
 
-const DIRECTIVES = [SparklineDirective];
+import { MomentDatePipe } from './pipes/moment-date.pipe';
+import { CNCurrencyPipe } from './pipes/cn-currency.pipe';
+import { KeysPipe } from './pipes/keys.pipe';
+import { YNPipe } from './pipes/yn.pipe';
+import { ModalHelper } from './helper/modal.helper';
+
+const DIRECTIVES = [SparklineDirective, DownFileDirective, ImageDirective];
 const PIPES = [MomentDatePipe, CNCurrencyPipe, KeysPipe, YNPipe];
 const HELPERS = [ ModalHelper ];
 
@@ -28,8 +31,8 @@ const HELPERS = [ ModalHelper ];
         HttpClientModule,
         AngularWebStorageModule,
         NgZorroAntdModule.forRoot(),
-        PerfectScrollbarModule,
-        ChartsModule
+        ChartsModule,
+        AngularEchartsModule
     ],
     declarations: [...DIRECTIVES, ...PIPES],
     providers: [ ...HELPERS ],
@@ -40,9 +43,9 @@ const HELPERS = [ ModalHelper ];
         NgZorroAntdModule,
         RouterModule,
         AngularWebStorageModule,
-        PerfectScrollbarModule,
         TranslateModule,
         ChartsModule,
+        AngularEchartsModule,
 
         ...DIRECTIVES,
         ...PIPES

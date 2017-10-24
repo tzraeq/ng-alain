@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-buttons',
-    templateUrl: './buttons.component.html',
-    styleUrls: ['./buttons.component.scss']
+    templateUrl: './buttons.component.html'
 })
 export class ButtonsComponent {
-    disabled: boolean = false;
-    loading: boolean = false;
-    size: string = 'default';
+    disabled = false;
+    loading = false;
+    size = 'default';
 
     toggleDisabled() {
         this.disabled = !this.disabled;

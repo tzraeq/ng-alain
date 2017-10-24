@@ -1,3 +1,4 @@
+// tslint:disable:no-console class-name
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
@@ -15,21 +16,23 @@ import { environment } from '../../../environments/environment';
 export class _HttpClient {
     constructor(private http: HttpClient) { }
 
-    private _loading: boolean = false;
+    private _loading = false;
 
     /** 是否正在加载中 */
     get loading(): boolean {
         return this._loading;
     }
 
-    private parseParams(params: any): HttpParams {
+    parseParams(params: any): HttpParams {
         let ret = new HttpParams();
         if (params) {
+            // tslint:disable-next-line:forin
             for (const key in params) {
                 let _data = params[key];
                 // 将时间转化为：时间戳 (秒)
-                if (moment.isDate(_data))
+                if (moment.isDate(_data)) {
                     _data = moment(_data).unix();
+                }
                 ret = ret.set(key, _data);
             }
         }

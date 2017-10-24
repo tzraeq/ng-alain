@@ -5,17 +5,17 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-guard',
-    templateUrl: './guard.component.html',
-    styleUrls: ['./guard.component.scss']
+    templateUrl: './guard.component.html'
 })
 export class GuardComponent {
     constructor(public userSrv: UserService, private router: Router) {}
 
     toggleLogin() {
-        if (this.userSrv.isLogin)
+        if (this.userSrv.isLogin) {
             this.userSrv.logout();
-        else
+        } else {
             this.userSrv.login('admin');
+        }
 
         this.router.navigate([ '/logics/guard' ]);
     }

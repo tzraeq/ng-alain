@@ -32,14 +32,16 @@ npm start
 npm run serve:hmr
 ```
 
+> [vscode] recommended install [ng-zorro-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode) plugins, that includes `nz-alain-*` snippets.
+
 ## Environment
 
 | package | version |
 | ------- | ------- |
-| `ng-alain` | 0.0.1-beta.4 | 
-| `ng-zorro-antd` | 0.5.1 |
-| `@angular` | 4.3.6 |
-| `@angular/cli` | 1.4.2 |
+| `ng-alain` | 0.1.2-beta.7 | 
+| `ng-zorro-antd` | ^0.5.3 |
+| `@angular` | ^4.4.5 |
+| `@angular/cli` | ^1.4.7 |
 
 **Third Library[Optional]**
 
@@ -61,6 +63,7 @@ npm run serve:hmr
 | `ng-tree-antd` | `angular-tree-component` |  |
 | `ng2-dnd` |  |  |
 | `sweetalert` |  |  |
+| `file-saver` |  |  |
 
 ## Guide Lines
 
@@ -81,10 +84,11 @@ npm run serve:hmr
 + Lazy load Assets
 + UI Router States
 + Multiple color options
-+ SCSS preprocessor
++ Less preprocessor
 + Well organized & commented code
 + Simple upgrade
 + Hot Module Replacement
++ Support [Docker](_documents/docker.md) deploy
 
 ## App Shots
 

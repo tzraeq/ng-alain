@@ -4,14 +4,13 @@ import { ACLService } from '@core/acl/acl.service';
 
 @Component({
     selector: 'app-acl',
-    templateUrl: './acl.component.html',
-    styleUrls: ['./acl.component.scss']
+    templateUrl: './acl.component.html'
 })
 export class ACLComponent {
 
-    full: boolean = true;
-    roleA: string = '';
-    roleB: string = '';
+    full = true;
+    roleA = '';
+    roleB = '';
 
     constructor(
         private aclService: ACLService,

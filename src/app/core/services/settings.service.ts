@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { LocalStorageService } from "angular-web-storage";
-import { ThemeType } from "./themes.service";
+import { LocalStorageService } from 'angular-web-storage';
+import { ThemeType } from './themes.service';
 
-const KEY: string = 'layout';
+const KEY = 'layout';
 
 export interface User {
     name?: string;
@@ -12,11 +12,13 @@ export interface User {
 }
 
 export interface App {
-    name?: string,
-    description?: string,
+    name?: string;
+    description?: string;
     year?: number;
     [key: string]: any;
 }
+
+export type SidebarThemeType = 'light' | 'dark';
 
 export interface Layout {
     /** 是否固定顶部菜单 */

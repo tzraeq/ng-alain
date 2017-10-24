@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { FileUploader } from "ng2-file-upload";
+import { FileUploader } from 'ng2-file-upload';
 
 const URL = 'https://test.com/';
 
 @Component({
     selector: 'app-upload',
-    templateUrl: './upload.component.html',
-    styleUrls: ['./upload.component.scss']
+    templateUrl: './upload.component.html'
 })
 export class UploadComponent {
 
@@ -15,8 +14,8 @@ export class UploadComponent {
         isHTML5: true
     });
 
-    hasBaseDropZoneOver: boolean = false;
-    hasAnotherDropZoneOver: boolean = false;
+    hasBaseDropZoneOver = false;
+    hasAnotherDropZoneOver = false;
     files: any[] = [];
 
     fileOverBase(e: any): void {

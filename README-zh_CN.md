@@ -31,14 +31,16 @@ npm start
 npm run serve:hmr
 ```
 
+> [vscode] 建议安装 [ng-zorro-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode) 插件，含 `nz-alain-*` 代码片断。
+
 ## 环境
 
 | 包 | 版本 |
 | ------- | ------- |
-| `ng-alain` | 0.0.1-beta.4 | 
-| `ng-zorro-antd` | 0.5.1 |
-| `@angular` | 4.3.6 |
-| `@angular/cli` | 1.4.2 |
+| `ng-alain` | 0.1.2-beta.7 | 
+| `ng-zorro-antd` | ^0.5.3 |
+| `@angular` | ^4.4.5 |
+| `@angular/cli` | ^1.4.7 |
 
 **第三方类型[可选]**
 
@@ -60,6 +62,7 @@ npm run serve:hmr
 | `ng-tree-antd` | `angular-tree-component` |  |
 | `ng2-dnd` |  |  |
 | `sweetalert` |  |  |
+| `file-saver` |  |  |
 
 ## 指引文章
 
@@ -85,10 +88,11 @@ npm run serve:hmr
 + 延迟加载及良好的启用画面
 + 良好的UI路由设计
 + 十种颜色版本
-+ SCSS预编译
++ Less预编译
 + 良好的目录组织结构
 + 简单升级
 + 模块热替换
++ 支持[Docker](_documents/docker.md)部署
 
 ## 应用截图
 

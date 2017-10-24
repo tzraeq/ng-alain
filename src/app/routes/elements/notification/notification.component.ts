@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NzMessageService, NzNotificationService, NzModalService } from "ng-zorro-antd";
+import { NzMessageService, NzNotificationService, NzModalService } from 'ng-zorro-antd';
 
 @Component({
     selector: 'app-notification',
-    templateUrl: './notification.component.html',
-    styleUrls: ['./notification.component.scss']
+    templateUrl: './notification.component.html'
 })
 export class NotificationComponent {
     constructor(
@@ -15,6 +14,16 @@ export class NotificationComponent {
     marks = {
         0: 'naver'
     };
+
+    notify = {
+        type: 'info',
+        title: 'Notification Title',
+        content: `This is the content of the notification.
+        This is the content of the notification. This is the content of the notification.`,
+        duration: 5
+    };
+
+    percent = 0;
 
     // =====Message=====
 
@@ -38,13 +47,6 @@ export class NotificationComponent {
         this.msg.remove();
     }
 
-    // =====Notification=====
-    notify = {
-        type: 'info',
-        title: 'Notification Title',
-        content: 'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
-        duration: 5
-    };
 
     createNotify() {
         this.ntf.create(
@@ -71,8 +73,6 @@ export class NotificationComponent {
     }
 
     // Progress Bar
-    percent = 0;
-
     decline() {
         this.percent = this.percent - 10;
         if (this.percent < 0) {

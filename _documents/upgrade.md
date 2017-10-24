@@ -24,13 +24,13 @@ src
         shared
             directives (可选：若干自定义的指令)
             pipes
-            styles
     assets
         i18n (可选：国际化)
         img  (可选：一些图片资源)
     styles
-        _alain-custom-variables.scss
-        index.scss
+        alain
+        _alain-custom-variables.less
+        index.less
 .angular-cli.json
 package.json
 ```
@@ -49,7 +49,7 @@ core文件夹包括菜单配置、布局配置、颜色主题、国际化（可�
 
 具体业务页面可以全部放在该目录下面。有关文件结构，可以参考里面的风格。**这里的内容对于后续的升级不会有任何是影响。**
 
-**src/app/shared/styles**
+**src/styles/alain**
 
 核心文件，除非你知道你在干什么，否则不建议你去调整它们。
 
@@ -57,7 +57,7 @@ core文件夹包括菜单配置、布局配置、颜色主题、国际化（可�
 
 建议项目所需要的样式放在该目录下。
 
-同时**勿删除_alain-custom-variables.scss**文件，你可以针对在此重新定义 ng-alain 的一些默认参数值。
+同时**勿删除_alain-custom-variables.less**文件，你可以针对在此重新定义 ng-alain 的一些默认参数值。
 
 **.angular-cli.json**
 

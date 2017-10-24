@@ -2,14 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-spin',
-    templateUrl: './spin.component.html',
-    styleUrls: ['./spin.component.scss']
+    templateUrl: './spin.component.html'
 })
 export class SpinComponent {
-    loading: boolean = true;
+    loading = true;
 
     data = [];
-    dataLoading: boolean = false;
+    dataLoading = false;
 
     load() {
         this.dataLoading = true;
